@@ -104,8 +104,87 @@ _Add screenshot here_
 - RxJS & HTTPClient
 - Razorpay Checkout Integration
 
+
+---
+
+## 📄 Pages & Functionality
+
+### 👥 Authentication
+- Register and login with email & password
+- JWT token stored in localStorage
+- Route protection via AuthGuard & AdminGuard
+
+---
+
+### 🧑 User Features
+
+- View available trips in card layout
+- Click to view detailed trip info
+- Book seats and proceed to payment
+- Razorpay integration for test payments
+- View personal enrollments with status
+- Cancel an approved booking  
+  - 💸 **Fine applied** (e.g. ₹100/seat or 10% of cost)
+
+---
+
+### 🧑‍💼 Admin Features
+
+- **Trip Management**: Create, edit, delete trips
+- **User Management**: View/delete users
+- **Enrollment Management**: View all bookings, approve/reject/cancel any
+- Separate Admin Dashboard view
+
+---
+
+### 📉 Cancellation Fee Logic
+
+- Only **Approved** bookings are cancellable
+- Fine calculated as:
+
+
 **Backend:**
 - Node.js + Express (ESModules)
 - MongoDB + Mongoose
 - JWT for auth
 - RESTful API
+
+
+---
+
+## 🌐 API Endpoints
+
+| Method | Route                             | Description                     |
+|--------|-----------------------------------|---------------------------------|
+| POST   | `/api/auth/register`              | Register new user               |
+| POST   | `/api/auth/login`                 | Login and return JWT            |
+| GET    | `/api/trips`                      | List all trips                  |
+| GET    | `/api/trips/:id`                  | Trip details                    |
+| POST   | `/api/trips/:id/enroll`           | Book trip with payment          |
+| GET    | `/api/trips/enrolled`             | View user’s bookings            |
+| POST   | `/api/enrollments/:id/cancel`     | Cancel a booking                |
+| GET    | `/api/enrollments`                | Admin: list all enrollments     |
+| PUT    | `/api/enrollments/:id`            | Admin: approve/reject enrollment|
+| GET    | `/api/users`                      | Admin: list all users           |
+| DELETE | `/api/users/:id`                  | Admin: delete a user            |
+
+---
+
+## 🚀 Installation
+
+### 1. Clone the repo
+
+```bash
+git clone https://github.com/your-username/trip-planner.git
+cd trip-planner
+
+cd trip-backend
+npm install
+# Add .env with MONGO_URI, JWT_SECRET, etc.
+npm run dev
+
+
+cd ../trip-planner
+npm install
+ng serve
+

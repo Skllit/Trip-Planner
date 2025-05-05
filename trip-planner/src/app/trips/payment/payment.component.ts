@@ -56,7 +56,7 @@ export class PaymentComponent implements OnInit {
     this.loading = true;
 
     const options = {
-      key: 'rzp_test_69kRzvitkm0bu3', // ✅ Replace with your actual Razorpay key
+      key: 'useyourownrazorpaykey---broooo', // ✅ Replace with your actual Razorpay key
       amount: this.seats * 500 * 1000, // ✅ ₹100 × seats × 100 (in paise)
       currency: 'INR',
       name: 'Trip Planner',

@@ -1,0 +1,69 @@
+.full-height {
+  height: calc(100vh - 64px);
+  background: #f9fbe7; // light subtle background
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+// Toolbar styles
+mat-toolbar {
+  background: linear-gradient(to right, #ff6f00, #ff8f00);
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+
+  mat-icon {
+    margin-right: 8px;
+  }
+
+  button[mat-button] {
+    color: white;
+    font-weight: 500;
+    text-transform: none;
+  }
+}
+
+// Sidenav styling
+mat-sidenav {
+  background: #fff3e0;
+  padding-top: 16px;
+  width: 240px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+
+  mat-nav-list {
+    a[mat-list-item] {
+      font-weight: 500;
+      color: #3e2723;
+      border-radius: 6px;
+      margin: 4px 8px;
+      transition: background 0.2s ease;
+
+      &:hover {
+        background-color: #ffe0b2;
+      }
+
+      &.mat-list-item-active {
+        background-color: #ffb74d;
+        color: #ffffff;
+      }
+    }
+  }
+}
+
+// Main content container
+mat-sidenav-content {
+  padding: 16px;
+}
+
+// Progress bar theme
+mat-progress-bar {
+  height: 4px;
+  background: #ffcc80;
+
+  .mat-progress-bar-fill::after {
+    background-color: #ff6f00;
+  }
+}

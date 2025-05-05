@@ -1,0 +1,40 @@
+mat-card {
+  background-color: #fefefe;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  max-width: 400px;
+  margin: 24px auto;
+  text-align: center;
+}
+
+mat-card-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 16px;
+}
+
+mat-card-content p {
+  font-size: 1rem;
+  color: #555;
+  margin: 16px 0;
+}
+
+button[mat-raised-button] {
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 10px 24px;
+  background-color: #ff6f00;
+  color: white;
+}
+
+button[mat-raised-button]:disabled {
+  background-color: #ccc;
+  color: #666;
+}
+
+.full-width {
+  width: 100%;
+  margin-bottom: 16px;
+}

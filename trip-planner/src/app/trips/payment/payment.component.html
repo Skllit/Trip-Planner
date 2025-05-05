@@ -1,0 +1,10 @@
+<mat-card>
+  <mat-card-title>Complete Payment</mat-card-title>
+  <mat-card-content>
+    <p>You are booking <strong>{{ seats }}</strong> seat(s).</p>
+
+    <button mat-raised-button color="accent" (click)="payWithRazorpay()" [disabled]="loading">
+      Pay & Book with Razorpay
+    </button>
+  </mat-card-content>
+</mat-card>

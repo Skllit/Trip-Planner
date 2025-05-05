@@ -1,0 +1,84 @@
+// General card styling
+mat-card {
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(to top left, #fffbe6, #fff);
+  transition: transform 0.25s ease-in-out;
+  padding: 8px;
+}
+
+mat-card:hover {
+  transform: scale(1.02);
+}
+
+// Card title
+mat-card-title {
+  font-size: 22px;
+  font-weight: bold;
+  color: #ff6f00;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  &::before {
+    content: '🌍';
+    font-size: 20px;
+  }
+}
+
+// Card content
+mat-card-content {
+  font-size: 15px;
+  color: #37474f;
+
+  p {
+    margin: 6px 0;
+    line-height: 1.5;
+
+    strong {
+      color: #1e88e5;
+    }
+  }
+}
+
+// Enroll button
+button[mat-button] {
+  background: #ff6f00;
+  color: white;
+  font-weight: 500;
+  padding: 6px 18px;
+  border-radius: 24px;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  transition: background 0.2s ease;
+}
+
+button[mat-button]:hover {
+  background: #e65100;
+}
+
+// Grid layout
+mat-grid-tile {
+  background: transparent !important;
+  padding: 4px;
+}
+
+// Headings
+h2 {
+  margin-top: 32px;
+  margin-bottom: 16px;
+  font-size: 24px;
+  color: #0d47a1;
+  font-weight: 600;
+  border-left: 6px solid #ff6f00;
+  padding-left: 12px;
+}
+
+// Optional: Custom scrollbar (WebKit)
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #ffab40;
+  border-radius: 10px;
+}

@@ -1,0 +1,55 @@
+.container {
+    padding: 16px;
+  }
+  
+  .detail-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 24px auto;
+    max-width: 600px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  mat-card-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 8px;
+  }
+  
+  mat-card-subtitle {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+    margin-bottom: 20px;
+  }
+  
+  mat-card-content p {
+    font-size: 1rem;
+    color: #444;
+    margin: 10px 0;
+  }
+  
+  .book-form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  mat-form-field {
+    width: 100%;
+  }
+  
+  button[mat-raised-button] {
+    align-self: flex-start;
+    background-color: #ff7043;
+    color: white;
+    font-weight: 600;
+  }
+  
+  button[mat-raised-button]:disabled {
+    background-color: #ccc;
+    color: #666;
+  }
+  

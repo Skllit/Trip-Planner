@@ -1,0 +1,51 @@
+<!-- Summary Cards -->
+<div class="overview-cards">
+  <mat-card>
+    <mat-card-title>Total Trips</mat-card-title>
+    <mat-card-content>
+      <h2>{{ totalTrips }}</h2>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card>
+    <mat-card-title>Total Enrollments</mat-card-title>
+    <mat-card-content>
+      <h2>{{ totalEnrollments }}</h2>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card>
+    <mat-card-title>Pending</mat-card-title>
+    <mat-card-content>
+      <h2>{{ pendingEnrollments }}</h2>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card>
+    <mat-card-title>Approved</mat-card-title>
+    <mat-card-content>
+      <h2>{{ approvedEnrollments }}</h2>
+    </mat-card-content>
+  </mat-card>
+</div>
+<div class="admin-grid">
+  <mat-card (click)="go('users')">
+    <mat-card-title>User Management</mat-card-title>
+    <mat-card-content>View, add, edit, or delete users.</mat-card-content>
+  </mat-card>
+  <mat-card (click)="go('trips')">
+    <mat-card-title>Trip Management</mat-card-title>
+    <mat-card-content>Create/edit/delete trips.</mat-card-content>
+  </mat-card>
+  <mat-card (click)="go('enrollments')">
+    <mat-card-title>Enrollment Management</mat-card-title>
+    <mat-card-content>Approve or reject bookings.</mat-card-content>
+  </mat-card>
+</div>
+
+<!-- Enrollment Trend Chart -->
+<div class="chart-container">
+  <canvas #enrollChart></canvas>
+</div>
+
+<!-- Existing Admin Tiles -->

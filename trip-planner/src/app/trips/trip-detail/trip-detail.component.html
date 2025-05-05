@@ -1,0 +1,20 @@
+<mat-card *ngIf="trip" class="detail-card">
+  <mat-card-title>{{ trip.title }}</mat-card-title>
+  <mat-card-subtitle>{{ trip.date | date:'fullDate' }} • {{ trip.startPoint }}</mat-card-subtitle>
+
+  <mat-card-content>
+    <p>{{ trip.details }}</p>
+    <p><strong>Cost/seat:</strong> {{ trip.cost | currency }}</p>
+    <p><strong>Seats left:</strong> {{ trip.seatsLeft }}/{{ trip.totalSeats }}</p>
+    <form [formGroup]="form" class="book-form">
+      <mat-form-field>
+        <mat-label>Seats to book</mat-label>
+        <input matInput type="number" formControlName="seats">
+        <mat-hint align="end">Max {{ trip.seatsLeft }}</mat-hint>
+      </mat-form-field>
+      <button mat-raised-button color="accent" (click)="book()" [disabled]="form.invalid">
+        Book &amp; Pay
+      </button>
+    </form>
+  </mat-card-content>
+</mat-card>
